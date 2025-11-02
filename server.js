@@ -19,6 +19,11 @@ mongoose
   .then(() => console.log("✅ MongoDB Connected"))
   .catch((err) => console.log("❌ MongoDB Connection Error:", err));
 
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
+
 // 🧍 Save Clerk user
 app.post("/api/users", async (req, res) => {
   try {
